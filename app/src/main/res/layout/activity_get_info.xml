@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/ScrollView1"
+    android:fillViewport="false"
+    android:background="@color/colorPrimary">
+
+    <!-- Name Label -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:id="@+id/RelativeLayoutID"
+        android:background="@color/colorPrimary">
+        <EditText android:id="@+id/input_source"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+
+            android:inputType="textPersonName"
+            android:hint="@string/EditTextSource"
+            android:text="Office Address"
+            android:enabled="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/btnMap"
+            android:layout_alignEnd="@+id/btnMap"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            />
+
+        <EditText android:id="@+id/input_destination"
+            android:layout_width="113dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textPostalAddress"
+            android:hint="Destination"
+            android:enabled="false"
+            android:layout_below="@+id/input_source"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btnMap"
+            android:layout_toStartOf="@+id/btnMap"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Maps"
+            android:id="@+id/btnMap"
+            android:layout_gravity="right"
+            android:background="@color/colorAccent"
+            android:layout_alignTop="@+id/input_destination"
+            android:layout_alignRight="@+id/timePicker1"
+            android:layout_alignEnd="@+id/timePicker1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+
+        <!--  Email Label -->
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePicker1"
+            android:layout_below="@+id/btnMap"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#ffffff"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dip"
+            android:focusableInTouchMode="true"
+            android:nestedScrollingEnabled="true"
+            android:timePickerMode="clock" />
+
+        <!-- Signup Button -->
+
+        <Button
+            android:id="@+id/btn_sendRequest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="Send Request"
+            android:layout_below="@+id/editTextTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:focusableInTouchMode="false"
+            android:layout_marginTop="20dip"
+            android:background="@color/colorAccent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/editTextTime"
+            android:hint="Time"
+            android:layout_below="@+id/timePicker1"
+            android:layout_alignLeft="@+id/btnTime"
+            android:layout_alignStart="@+id/timePicker1"
+            android:layout_toLeftOf="@+id/btnTime"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="SaveTime"
+            android:id="@+id/btnTime"
+            android:layout_above="@+id/btn_sendRequest"
+            android:layout_below="@+id/timePicker1"
+            android:layout_alignRight="@+id/timePicker1"
+            android:layout_alignEnd="@+id/timePicker1"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
